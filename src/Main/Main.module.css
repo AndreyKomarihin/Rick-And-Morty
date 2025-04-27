@@ -1,0 +1,92 @@
+
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.rick {
+    position: absolute;
+    pointer-events: none;
+    top: 205px;
+    max-width: 200px;
+}
+
+.title {
+    text-align: center;
+font-family: "Saira", sans-serif;
+    font-weight: bold;
+}
+
+.characterCardContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.titleText {
+    padding: 3px 20px;
+    border-radius: 15px;
+    -webkit-text-stroke: 1px #bfde42;
+    color: #42b4ca;
+    background-color: #252525;
+}
+
+.arrowContainer {
+    margin-top: 50px;
+    gap: 100px;
+    display: flex;
+}
+
+.arrowBtn {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    flex-shrink: 0;
+}
+
+.prevArrow, .nextArrow {
+    max-width: 40px;
+}
+
+.nextArrow {
+    transform: scaleX(-1);
+}
+
+.nextArrow:active {
+    transform: scale(0.95) scaleX(-1);
+}
+
+.prevArrow:active {
+    transform: scale(0.95);
+}
+
+.paginationContainer {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.paginationNumber {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 5px 0;
+
+    border-radius: 6px;
+    background-color: #252525;
+    box-shadow: 0 0 3px #bfde42;
+    min-width: 31px;
+    color: white;
+
+}
+
+.paginationNumberActive {
+    background-color: #464646;
+    border: 1px solid #42b4ca;
+    box-shadow: 0 0 3px #bfde42;
+}

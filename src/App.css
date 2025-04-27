@@ -1,0 +1,14 @@
+.saira-uniquifier {
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
