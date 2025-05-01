@@ -32,6 +32,8 @@ export const Main = () => {
 
     const [selectedPage, setSelectedPage] = useState(1)
 
+
+
     async function getResponse() {
         const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${value}&page=${selectedPage}`)
         const characterList = await response.json()
@@ -48,6 +50,16 @@ export const Main = () => {
         }
     }
 
+    useEffect(() => {
+        setSelectedPage(1)
+    }, [value]);
+
+    useEffect(() => {
+        if (selectedPage === -1) {
+            setSelectedPage(1)
+        }
+    }, [selectedPage]);
+
     useEffect(()  => {getResponse()},[value, selectedPage])
 
     return (
@@ -57,7 +69,7 @@ export const Main = () => {
                 his name in the search and you will understand him
                 much more!</h1>
             <img className={styles.rick} src='/public/1664161371_1-zefirka-club-p-rik-bez-fona-2.png' alt='logo'/>
-            <SearchCharacters onChange={(event: React.ChangeEvent<HTMLInputElement>) => setValue(event.target.value)}/>
+            <SearchCharacters onChange={(event: React.ChangeEvent<HTMLInputElement>) => setValue(event.target.value) }/>
             <div className={styles.characterCardContainer}>{backArr?.results?.map((character) => {
                 return (
                     <CharacterCard key={character.id}
@@ -74,12 +86,12 @@ export const Main = () => {
             <button
                 className={styles.arrowBtn}
                 onClick={() => setSelectedPage(selectedPage - 1)}
-            ><img className={styles.prevArrow} src='public/blue-arrow-60-408x198.png'/>
+            ><img className={styles.prevArrow} src='public/unnamed.png'/>
             </button>
             <button
                 className={styles.arrowBtn}
                 onClick={() => setSelectedPage(selectedPage + 1)}
-            ><img className={styles.nextArrow} src='public/blue-arrow-60-408x198.png'/>
+            ><img className={styles.nextArrow} src='public/unnamed.png'/>
             </button>
             </div>
             <div className={styles.paginationContainer}>

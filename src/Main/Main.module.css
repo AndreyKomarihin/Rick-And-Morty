@@ -55,16 +55,16 @@ font-family: "Saira", sans-serif;
     max-width: 40px;
 }
 
-.nextArrow {
+.prevArrow {
     transform: scaleX(-1);
 }
 
 .nextArrow:active {
-    transform: scale(0.95) scaleX(-1);
+    transform: scale(0.95);
 }
 
 .prevArrow:active {
-    transform: scale(0.95);
+    transform: scale(0.95) scaleX(-1);
 }
 
 .paginationContainer {
